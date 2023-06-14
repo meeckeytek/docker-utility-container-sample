@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  npm:
+    build: ./backend
+    ports:
+      - '80:80'
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    stdin_open: true
+    tty: true
